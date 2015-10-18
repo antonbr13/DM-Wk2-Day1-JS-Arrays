@@ -3,8 +3,17 @@
 
 var arr = [10,20,30];
 //Create a function named 'first' that is given 'arr' as the argument and  returns the first item in the given array.
+//Code Here
 
-  //Code Here
+function first( arr ) {
+  return arr[0];
+}
+
+console.log(first(arr)); //returns a value of 10
+
+
+
+
 
 
 //Next problem
@@ -13,9 +22,7 @@ var arr = [10,20,30];
 
 var arr = [40,50,60];
 //Create a function named 'last' that is given 'arr' as the argument and returns the last item in the given array.
-
-
-  //Code Here
+//Code Here
 
 
 //Next Problem
