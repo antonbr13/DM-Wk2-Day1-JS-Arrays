@@ -1,3 +1,116 @@
+sdafasf/* NOTES
+_______________
+
+arrays are very much about order
+    if you loop over an array you will get the items back in order
+    a list whose order is important
+  
+
+an array is an object that has properties and methods:
+    .length
+    
+    
+accessing elements in an array
+    var colors = ['red', 'brown', 'blue'];
+    console.log(colors[2])
+    
+    
+adding elements to the end of an array
+    .push()
+    
+    colors.push('white', 'blue', 44);
+    
+    colors.push(33, 44, 55, [55, 'red', 66])    
+        ^added an array to the last item of the colors array
+   
+        
+remove the last element from an array
+    .pop
+    
+    var removed = colors.pop();
+    console.log(colors);
+    console.log(removed);
+     
+    *.push() and .pop() alter the array
+    
+
+add a new element to the front of the aray
+    .unshift()
+    
+    
+remove the first element in the array
+    .shift()
+    
+    
+combine all the elements in the array into a single element
+   the value type doesn't matter and will treat/convert each element into a string
+   
+      var word = ['word', 'from', 'a', 'book'];
+      var combined = words.join('\n');
+      console.log(combined);
+      
+      
+find which index contains the color 'red'
+
+    .indexOf() doesn't change the array
+    
+    var indexOfRed = colors.indexOf('red');
+    console.log(indexOfRed);
+    console.log(colors[indexOfRed]);
+    var colors2 = ['brown', 'green', 'purple', 'red']; 
+
+.splice()
+    var colors3 = ['brown', 'green', 'purple', 'red']; 
+    colors3.splice(2, 0, 'hot pink');
+    console.log(colors3);
+
+      
+.slice()
+    (1, 3)
+      ^first parameter is the starting index
+        ^second parameter up to but not including that index     
+
+
+create another array with just the last 3 colors --> Method 1
+
+    var indexToStart = colors2.length -3;
+    var last3 = colors2.slice(indexToStart);
+    console.log(last3);
+    
+
+
+create another array with just the last 3 colors --> Method 2
+
+    last3 = colors2.slice(-3);
+    console.log(last3);
+    
+    
+reverse the order of the colors
+
+      colors3.reverse();
+      console.log(colors3);
+      
+      
+loop through all the colors and display on the console
+
+      for (var i = 0; i < colors3.length; i++) {
+        console.log(colors3[i]);
+      }
+      
+      (OR)
+      
+      for (var color in colors) {
+        console.log(color);
+      }
+      
+      
+now reverse and loop again - what's the scope of the 
+    
+*/
+
+
+
+
 //Once you complete a problem, open up Chrome and check the answer in the console.
 //
 
@@ -70,11 +183,12 @@ console.log(reversedLooper(letters))
   //Code Here
   
 var nums = [5,2,3,6,22,98,45,23,22,12];
+var nums2 = [];
 
 function evenFinder( nums ) {
   for ( var i = nums.length -1; i > 0; i-- ) {
-    if ( nums[i] % 2 !== 0 ) {
-      nums.splice( i, 1 );
+    if ( nums[i] % 2 === 0 ) {
+      nums2.splice( i, 1 );
       
     }
   }
